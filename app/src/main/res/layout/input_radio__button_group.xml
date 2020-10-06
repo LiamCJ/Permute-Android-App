@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#1E1E1E"
+    android:backgroundTint="#1E1E1E"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="314dp"
+        android:layout_height="160dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioGroup
+            android:id="@+id/inputRadioGroup"
+            android:layout_width="86dp"
+            android:layout_height="154dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/outputRadioGroup"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RadioButton
+                android:id="@+id/inputZAR"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="#FFFFFF"
+                android:text="@string/inputZAR"
+                android:textColor="#FFFFFF"
+                android:onClick="onInputRadioButtonClicked"
+                android:checked="true"/>
+
+            <RadioButton
+                android:id="@+id/inputEUR"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="#FFFFFF"
+                android:text="@string/inputEUR"
+                android:textColor="#FFFFFF"
+                android:onClick="onInputRadioButtonClicked" />
+
+            <RadioButton
+                android:id="@+id/inputUSD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="#FFFFFF"
+                android:text="@string/inputUSD"
+                android:textColor="#FFFFFF"
+                android:onClick="onInputRadioButtonClicked" />
+
+            <RadioButton
+                android:id="@+id/inputCAD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="#FFFFFF"
+                android:text="@string/inputCAD"
+                android:textColor="#FFFFFF"
+                android:onClick="onInputRadioButtonClicked" />
+
+            <RadioButton
+                android:id="@+id/inputGBP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="#FFFFFF"
+                android:text="@string/inputGBP"
+                android:textColor="#FFFFFF"
+                android:onClick="onInputRadioButtonClicked" />
+
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/outputRadioGroup"
+            android:layout_width="86dp"
+            android:layout_height="158dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.94"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RadioButton
+                android:id="@+id/outputZAR"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="#FFFFFF"
+                android:text="@string/outputZAR"
+                android:textColor="#FFFFFF"
+                android:onClick="onOutputRadioButtonClicked"/>
+
+            <RadioButton
+                android:id="@+id/outputEUR"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="#FFFFFF"
+                android:text="@string/outputEUR"
+                android:textColor="#FFFFFF"
+                android:onClick="onOutputRadioButtonClicked"
+                android:checked="true"/>
+
+            <RadioButton
+                android:id="@+id/outputUSD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="#FFFFFF"
+                android:text="@string/outputUSD"
+                android:textColor="#FFFFFF"
+                android:onClick="onOutputRadioButtonClicked" />
+
+            <RadioButton
+                android:id="@+id/outputCAD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="#FFFFFF"
+                android:text="@string/outputCAD"
+                android:textColor="#FFFFFF"
+                android:onClick="onOutputRadioButtonClicked" />
+
+            <RadioButton
+                android:id="@+id/outputGBP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="#FFFFFF"
+                android:text="@string/outputGBP"
+                android:textColor="#FFFFFF"
+                android:onClick="onOutputRadioButtonClicked" />
+
+        </RadioGroup>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

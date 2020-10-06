@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">PERMUTE</string>
+    <string name="inputZAR">ZAR</string>
+    <string name="inputEUR">EUR</string>
+    <string name="inputUSD">USD</string>
+    <string name="inputCAD">CAD</string>
+    <string name="inputGBP">GBP</string>
+    <string name="outputZAR">ZAR</string>
+    <string name="outputEUR">EUR</string>
+    <string name="outputUSD">USD</string>
+    <string name="outputCAD">CAD</string>
+    <string name="outputGBP">GBP</string>
+</resources>
