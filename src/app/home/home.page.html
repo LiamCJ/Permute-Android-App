@@ -1,0 +1,47 @@
+<ion-app>
+  <ion-content fullscreen>
+  <ion-grid>
+    <ion-row>
+      <ion-col><ion-label>Permute From {{this.environmentVar[this.baseCurrency]}} to {{this.environmentVar[this.convertedCurrency]}}</ion-label></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="1"><ion-label position="fixed">{{this.GetCurrencySymbol(this.GetBaseCurrency())}}</ion-label></ion-col>
+      <ion-col><ion-input type="number" pattern="[0-9]*" clear-input="true" inputmode="numeric" id="moneyInput" [(ngModel)]="inputMoney" placeholder="{{this.GetBaseCurrency()}}" (ionInput)="this.convertCurrency()"></ion-input></ion-col>
+
+      <ion-col size="1"><ion-label position="fixed"> = {{this.GetCurrencySymbol(this.GetConvertedCurrency())}}</ion-label></ion-col>
+      <ion-col><ion-input id="outputCurrency" readonly="true" placeholder="{{this.GetConvertedCurrency()}}" value="{{this.GetCurrencyValue(this.GetConvertedCurrency())}}"></ion-input></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-20  size-md class="ion-align-self-start">
+
+        <ion-item>
+          <ion-label>{{this.GetBaseCurrency()}}</ion-label>
+          <ion-select [(ngModel)]="baseCurrencySelect" value="{{this.GetBaseCurrency()}}" (ionChange)="this.SetBaseCurrency(this.baseCurrencySelect)" okText="Okay" cancelText="Dismiss">
+            <ion-select-option value="ZAR" >Rand</ion-select-option>
+            <ion-select-option value="EUR" >Euro</ion-select-option>
+            <ion-select-option value="SEK" >Krona</ion-select-option>
+            <ion-select-option value="GBP" >Pound</ion-select-option>
+            <ion-select-option value="USD" >US Dollar</ion-select-option>
+            <ion-select-option value="CAD" >CA Dollar</ion-select-option>
+          </ion-select>
+        </ion-item>
+
+      </ion-col>
+      <ion-col col-20  size-md class="ion-align-self-end">
+
+        <ion-item>
+          <ion-label>{{this.GetConvertedCurrency()}}</ion-label>
+          <ion-select [(ngModel)]="convertedCurrencySelect" value="{{this.GetConvertedCurrency()}}" (ionChange)="this.SetConvertedCurrency(this.convertedCurrencySelect)" okText="Okay" cancelText="Dismiss">
+            <ion-select-option value="ZAR" >Rand</ion-select-option>
+            <ion-select-option value="EUR" >Euro</ion-select-option>
+            <ion-select-option value="SEK" >Krona</ion-select-option>
+            <ion-select-option value="GBP" >Pound</ion-select-option>
+            <ion-select-option value="USD" >US Dollar</ion-select-option>
+            <ion-select-option value="CAD" >CA Dollar</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  </ion-content>
+</ion-app>
